@@ -47,7 +47,7 @@ To configure your deployment's endpoints on provision, use the _Endpoints_ field
 
 Service Endpoints are enabled through an optional parameter when you provision through the CLI and API. Provisioning is handled by the Resource Controller, and you pass the `service-endpoints` parameter one of the options `public`, `private`, or `public-and-private`. 
 
-For more information, see the [Provisioning](/docs/services/cloud-databases?topic=cloud-databases-provisioning) page.
+For more information, see the [Provisioning](/docs/cloud-databases?topic=cloud-databases-provisioning) page.
 
 {{site.data.keyword.databases-for}} deployments except {{site.data.keyword.databases-for-mongodb}} allow for both public and private networking to be enabled at the same time.
 {: .tip}

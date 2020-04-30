@@ -46,7 +46,7 @@ Users can optionally set:
 2. **Key Protect instance and disk encryption key** - If you use Key Protect, an instance and key can be selected to encrypt the deployment's disk. If you do not use your own key, the deployment automatically creates and manages its own disk encryption key.
 3. **Initial resource allocation** - Specify initial memory and disk sizes for your databases. The minimum sizes of memory and disk are selected by default. 
 4. **CPU allocation** - Choose dedicated compute resources for your deployment. With dedicated cores, your resource group is given a single-tenant host with a guaranteed minimum reserve of cpu shares. Your deployments are then allocated the number of CPUs you specify. The default `Shared CPU` uses compute resources on shared hosts.
-5. **Endpoints** - You can configure the types [Service Endpoints](/docs/services/cloud-databases?topic=cloud-databases-service-endpoints) on your deployment. The default is that connections to your deployment can be made from the public network.
+5. **Endpoints** - You can configure the types [Service Endpoints](/docs/cloud-databases?topic=cloud-databases-service-endpoints) on your deployment. The default is that connections to your deployment can be made from the public network.
 
 Once you select the appropriate settings, click **Create** to start the provisioning process. 
 
@@ -80,7 +80,7 @@ This command reports the current state of the service instance.
 
 ### Additional flags and parameters
 
-The `--service-endpoints` flag allows you to specify which types [Service Endpoints](/docs/services/cloud-databases?topic=cloud-databases-service-endpoints) on your deployment. Its default is that connections to your deployment can be made from the public network. Possible values are 'public', 'private', 'public-and-private'.
+The `--service-endpoints` flag allows you to specify which types [Service Endpoints](/docs/cloud-databases?topic=cloud-databases-service-endpoints) on your deployment. Its default is that connections to your deployment can be made from the public network. Possible values are 'public', 'private', 'public-and-private'.
 
 The `service-instance-create` command supports a `-p` flag, which allows [additional parameters](#list-of-additional-parameters) to be passed to the provisioning process. The parameters are in JSON format. Some parameters values are CRNs (Cloud Resource Name), which uniquely identifies a resource in the cloud. All parameter names and values are passed as strings.
 
@@ -149,8 +149,8 @@ More information about this specific {{site.data.keyword.cloud_notm}} provider c
 
 * `backup_id`- A CRN of a backup resource to restore from. The backup must have been created by a database deployment with the same service ID. The backup is loaded after provisioning and the new deployment starts up that uses that data. A backup CRN is in the format `crn:v1:<...>:backup:<uuid>`. If omitted, the database is provisioned empty.
 * `version` - The version of the database to be provisioned. If omitted, the database is created with the most recent major and minor version.
-* `key_protect_key` - The CRN of a [Key Protect key](/docs/services/key-protect?topic=key-protect-view-keys), which is then used for disk encryption. A key protect CRN is in the format `crn:v1:<...>:key:<id>`.
+* `key_protect_key` - The CRN of a [Key Protect key](/docs/key-protect?topic=key-protect-view-keys), which is then used for disk encryption. A key protect CRN is in the format `crn:v1:<...>:key:<id>`.
 * `members_memory_allocation_mb` -  Total amount of memory to be shared between the database members within the database. For example, if the value is "6144", and there are three database members, then the deployment gets 6 GB of RAM total, giving 2 GB of RAM per member. If omitted, the default value is used for the database type is used.
 * `members_disk_allocation_mb` - Total amount of disk to be shared between the database members within the database. For example, if the value is "30720", and there are three members, then the deployment gets 30 GB of disk total, giving 10 GB of disk per member. If omitted, the default value for the database type is used.
 * `members_cpu_allocation_count` - Enables and allocates the number of specified dedicated cores to your deployment. For example, to use two dedicated cores per member, use `"members_cpu_allocation_count":"2"`. If omitted, the default value "Shared CPU" uses compute resources on shared hosts.
-* `service-endpoints` - Selects the types [Service Endpoints](/docs/services/cloud-databases?topic=cloud-databases-service-endpoints) supported on your deployment. Options are `public`, `private`, or `public-and-private`. If omitted, the default is `public`. Note that in the CLI, `service-endpoints` is a flag, and not a parameter.
+* `service-endpoints` - Selects the types [Service Endpoints](/docs/cloud-databases?topic=cloud-databases-service-endpoints) supported on your deployment. Options are `public`, `private`, or `public-and-private`. If omitted, the default is `public`. Note that in the CLI, `service-endpoints` is a flag, and not a parameter.

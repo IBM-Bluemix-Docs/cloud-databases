@@ -18,13 +18,13 @@ subcollection: cloud-databases, bring you own key, byok, cryptoshredding
 # Key Protect Integration
 {: #key-protect}
 
-The data that you store in {{site.data.keyword.cloud}} Databases is encrypted by default by using randomly generated keys. If you need to control the encryption keys, you can use [{{site.data.keyword.keymanagementservicelong_notm}}](/docs/services/key-protect?topic=key-protect-integrate-services) to create, add, and manage encryption keys. Then, you can associate those keys with your {{site.data.keyword.databases-for}} deployment to encrypt your databases.
+The data that you store in {{site.data.keyword.cloud}} Databases is encrypted by default by using randomly generated keys. If you need to control the encryption keys, you can use [{{site.data.keyword.keymanagementservicelong_notm}}](/docs/key-protect?topic=key-protect-integrate-services) to create, add, and manage encryption keys. Then, you can associate those keys with your {{site.data.keyword.databases-for}} deployment to encrypt your databases.
 
-To get started, you need [{{site.data.keyword.keymanagementserviceshort}}](https://{DomainName}/catalog/services/key-protect) provisioned on your {{site.data.keyword.cloud_notm}} account.
+To get started, you need [{{site.data.keyword.keymanagementserviceshort}}](https://{DomainName}/catalog/key-protect) provisioned on your {{site.data.keyword.cloud_notm}} account.
 
 ## Creating or adding a key in {{site.data.keyword.keymanagementserviceshort}}
 
-Navigate to your instance of {{site.data.keyword.keymanagementserviceshort}} and [generate or enter a key](/docs/services/key-protect?topic=key-protect-getting-started-tutorial).
+Navigate to your instance of {{site.data.keyword.keymanagementserviceshort}} and [generate or enter a key](/docs/key-protect?topic=key-protect-getting-started-tutorial).
 
 ## Granting service authorization
 
@@ -43,14 +43,14 @@ Authorize {{site.data.keyword.keymanagementserviceshort}} for use with {{site.da
 
 ## Using the Key Protect Key
 
-Once you grant your {{site.data.keyword.databases-for}} deployments permission to use your keys, you supply the [key name or CRN](/docs/services/key-protect?topic=key-protect-view-keys) when you provision a deployment. The deployment uses your encryption key to encrypt your data.
+Once you grant your {{site.data.keyword.databases-for}} deployments permission to use your keys, you supply the [key name or CRN](/docs/key-protect?topic=key-protect-view-keys) when you provision a deployment. The deployment uses your encryption key to encrypt your data.
 
 If you provision a deployment through the CLI or API, the key protect key needs to be identified by its full CRN, not just its ID. A key protect CRN is in the format `crn:v1:<...>:key:<id>`.
 {: .tip}
 
 ## Deleting the Deployment
 
-If you delete a deployment that is protected with a Key Protect key, the deployment remains registered against the key for the duration of the soft-deletion period (up to 9 days). If you need to delete the key in the soft-deletion period, you have to [force delete](/docs/key-protect?topic=key-protect-delete-keys) the key. After the soft-deletion period the key can be deleted without the force. You can check the [association between the key and your deployment](/docs/services/key-protect?topic=key-protect-view-protected-resources) to determine when you can delete the key.
+If you delete a deployment that is protected with a Key Protect key, the deployment remains registered against the key for the duration of the soft-deletion period (up to 9 days). If you need to delete the key in the soft-deletion period, you have to [force delete](/docs/key-protect?topic=key-protect-delete-keys) the key. After the soft-deletion period the key can be deleted without the force. You can check the [association between the key and your deployment](/docs/key-protect?topic=key-protect-view-protected-resources) to determine when you can delete the key.
 
 ## Cryptoshredding
 

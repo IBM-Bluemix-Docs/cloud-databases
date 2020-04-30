@@ -98,7 +98,7 @@ Once the branch has been cloned, you can select the appropriate directory for th
 
       For this example, we're using the `default` resource group.
 
-9. Create your own private image repository in [IBM Cloud Container Registry](/docs/services/Registry?topic=registry-registry_overview) to store your application's Docker image. Since we want the images to be private, we need to create a namespace, which creates a unique URL to your image repository.  
+9. Create your own private image repository in [IBM Cloud Container Registry](/docs/Registry?topic=registry-registry_overview) to store your application's Docker image. Since we want the images to be private, we need to create a namespace, which creates a unique URL to your image repository.  
 
       ```shell
       ibmcloud cr namespace-add <your_namespace>
@@ -110,7 +110,7 @@ Once the branch has been cloned, you can select the appropriate directory for th
       ibmcloud ks cluster-service-bind <your_cluster_name> default <your_database_deployment>
       ```
 
-      Note: If your database uses both [public and private endpoints](/docs/services/cloud-databases?topic=cloud-databases-service-endpoints), your public endpoint is used by default. Therefore, if you want to select the private endpoint, first you need to create a service key for your database so Kubernetes can use it when binding to the database. You set up a service key using the command:
+      Note: If your database uses both [public and private endpoints](/docs/cloud-databases?topic=cloud-databases-service-endpoints), your public endpoint is used by default. Therefore, if you want to select the private endpoint, first you need to create a service key for your database so Kubernetes can use it when binding to the database. You set up a service key using the command:
 
       ```
       ibmcloud resource service-key-create <your-private-key> Administrator --instance-name <your_database_deployment> --service-endpoint private  

@@ -163,8 +163,8 @@ Metric | Description | Left Y Axis
 
 Metric | Description | Left Y Axis 
 ----------|----------|---------
-`cluster.total-connections` | The total number of [PostgreSQL connections](/docs/services/databases-for-postgresql?topic=databases-for-postgresql-managing-connections) being used. | default
-`cluster.replication-lag-bytes` | How far behind a [PostgreSQL read-only replica](/docs/services/databases-for-postgresql?topic=databases-for-postgresql-read-only-replicas) is, in bytes | `data (IEC)`, `bytes`
+`cluster.total-connections` | The total number of [PostgreSQL connections](/docs/databases-for-postgresql?topic=databases-for-postgresql-managing-connections) being used. | default
+`cluster.replication-lag-bytes` | How far behind a [PostgreSQL read-only replica](/docs/databases-for-postgresql?topic=databases-for-postgresql-read-only-replicas) is, in bytes | `data (IEC)`, `bytes`
 {: caption="Table 5.{{site.data.keyword.databases-for-postgresql}} metrics" caption-side="top"}
 
 

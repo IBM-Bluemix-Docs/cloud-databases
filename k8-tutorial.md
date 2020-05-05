@@ -106,20 +106,20 @@ Once the branch has been cloned, you can select the appropriate directory for th
 
 10. Add the Cloud Databases deployment to your cluster.
 
-      ```shell
-      ibmcloud ks cluster-service-bind <your_cluster_name> default <your_database_deployment>
+      ```
+      ibmcloud ks cluster service bind <your_cluster_name> default <your_database_deployment>
       ```
 
       Note: If your database uses both [public and private endpoints](/docs/cloud-databases?topic=cloud-databases-service-endpoints), your public endpoint is used by default. Therefore, if you want to select the private endpoint, first you need to create a service key for your database so Kubernetes can use it when binding to the database. You set up a service key using the command:
 
       ```
-      ibmcloud resource service-key-create <your-private-key> Administrator --instance-name <your_database_deployment> --service-endpoint private  
+      ibmcloud resource service-key-create <your-private-key> --instance-name <your_database_deployment> --service-endpoint private  
       ```
       
-      This key has the `Administrator` role on the database deployment, and the private service endpoint is selected with `--service-endpoint private`. After that, you bind the database to the Kubernetes cluster through the private endpoint by using the command:
+      The private service endpoint is selected with `--service-endpoint private`. After that, you bind the database to the Kubernetes cluster through the private endpoint by using the command:
 
       ```
-      ibmcloud ks cluster-service-bind <your_cluster_name> default <your_database_deployment> --key example-private-key
+      ibmcloud ks cluster service bind <your_cluster_name> default <your_database_deployment> --key example-private-key
       ```
 
 11. Verify that the Kubernetes secret was created in your cluster namespace. Kubernetes uses secrets to store confidential information like the IBM Cloud Identity and Access Management (IAM) API key and the URL that the container uses to gain access. Running the following command, you get the API key for accessing the instance of your deployment that's provisioned in your account.

@@ -25,6 +25,7 @@ Backups for {{site.data.keyword.databases-for}} deployments are accessible from 
 - If you delete your deployment, its backups are deleted automatically.
 - Scheduling of the daily backup is not configurable.
 - Backups are cross-regionally durable. Backups are stored across multiple regions, and are restorable to other regions.
+- Backup storage is encrypted. If you need to manage the encryption keys, you can do so with the [Key Protect integration](/docs/cloud-databases?topic=cloud-databases-key-protect#byok-for-backups). Otherwise, they are encrypted with a key automatically generated for your deployment.
 
 ## Backups in the UI
 

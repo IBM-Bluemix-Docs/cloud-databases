@@ -66,14 +66,7 @@ ibmcloud resource service-instance-create <service-name> <service-id> <service-p
 
 More information about this command, in general, is available in the [CLI reference for resource groups](/docs/cli/reference/ibmcloud?topic=cloud-cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_create).
 
-For example, if you want to provision a {{site.data.keyword.messages-for-rabbitmq}} deployment, set the service name as the name you want for your deployment. Then, set `messages-for-rabbitmq` as the service ID. Enter `standard` for the service plan ID and `us-south` (or your region) for the region.
-
-```
-ibmcloud resource service-instance-create my-example-queue messages-for-rabbitmq standard us-south
-```
-
 When the command is run, provisioning the database deployment begins. The database takes some time to deploy. You can check on its progress on your {{site.data.keyword.cloud_notm}} Dashboard. You can also run:
-
 ```
 ibmcloud resource service-instance <service-name>
 ```
@@ -82,16 +75,19 @@ This command reports the current state of the service instance.
 
 ### Additional flags and parameters
 
-The `--service-endpoints` flag allows you to specify which types [Service Endpoints](/docs/cloud-databases?topic=cloud-databases-service-endpoints) on your deployment. Its default is that connections to your deployment can be made from the public network. Possible values are 'public', 'private', 'public-and-private'.
+The `--service-endpoints` flag allows you to specify which types [Service Endpoints](/docs/services/cloud-databases?topic=cloud-databases-service-endpoints) on your deployment. Its default is that connections to your deployment can be made from the public network. Possible values are 'public', 'private', 'public-and-private'. If the flag is omitted, the default is public endpoints.
+```
+ibmcloud resource service-instance-create <service-name> --service-endpoints <endpoint-type>
+```
 
 The `service-instance-create` command supports a `-p` flag, which allows [additional parameters](#list-of-additional-parameters) to be passed to the provisioning process. The parameters are in JSON format. Some parameters values are CRNs (Cloud Resource Name), which uniquely identifies a resource in the cloud. All parameter names and values are passed as strings.
 
 For example, if a database is being provisioned from a particular backup and the new database deployment needs 6 GB of memory, then the command looks like:
 
 ```
-ibmcloud resource service-instance-create example-rabbit messages-for-rabbitmq standard us-south \
+ibmcloud resource service-instance-create example-database <service-name> standard us-south \
 -p \ '{
-  "backup_id": "crn:v1:bluemix:public:messages-for-rabbitmq:us-south:a/54e8ffe85dcedf470db5b5ee6ac4a8d8:1b8f53db-fc2d-4e24-8470-f82b15c71717:backup:06392e97-df90-46d8-98e8-cb67e9e0a8e6",
+  "backup_id": "crn:v1:bluemix:public:databases-for:us-south:a/54e8ffe85dcedf470db5b5ee6ac4a8d8:1b8f53db-fc2d-4e24-8470-f82b15c71717:backup:06392e97-df90-46d8-98e8-cb67e9e0a8e6",
   "members_memory_allocation_mb": "6144"
 }'
 ```
@@ -130,7 +126,8 @@ If you use Terraform to manage your infrastructure, the [{{site.data.keyword.clo
 
 * `backup_id`- A CRN of a backup resource to restore from. The backup must have been created by a database deployment with the same service ID. The backup is loaded after provisioning and the new deployment starts up that uses that data. A backup CRN is in the format `crn:v1:<...>:backup:<uuid>`. If omitted, the database is provisioned empty.
 * `version` - The version of the database to be provisioned. If omitted, the database is created with the most recent major and minor version.
-* `key_protect_key` - The CRN of a [Key Protect key](/docs/key-protect?topic=key-protect-view-keys), which is then used for disk encryption. A key protect CRN is in the format `crn:v1:<...>:key:<id>`.
+* `disk_encryption_key_crn` - The CRN of a [Key Protect key](/docs/key-protect?topic=key-protect-view-keys), which is then used for disk encryption. A key protect CRN is in the format `crn:v1:<...>:key:<id>`.
+* `backup_encryption_key_crn` - The CRN of a [Key Protect key](/docs/key-protect?topic=key-protect-view-keys), which is then used for backup encryption. A key protect CRN is in the format `crn:v1:<...>:key:<id>`. Note: in order to use a key for your backups, you must first [enable the service-to-service delegation](/docs/cloud-databases?topic=cloud-databases-key-protect#BYOK-for-backups).
 * `members_memory_allocation_mb` -  Total amount of memory to be shared between the database members within the database. For example, if the value is "6144", and there are three database members, then the deployment gets 6 GB of RAM total, giving 2 GB of RAM per member. If omitted, the default value is used for the database type is used.
 * `members_disk_allocation_mb` - Total amount of disk to be shared between the database members within the database. For example, if the value is "30720", and there are three members, then the deployment gets 30 GB of disk total, giving 10 GB of disk per member. If omitted, the default value for the database type is used.
 * `members_cpu_allocation_count` - Enables and allocates the number of specified dedicated cores to your deployment. For example, to use two dedicated cores per member, use `"members_cpu_allocation_count":"2"`. If omitted, the default value "Shared CPU" uses compute resources on shared hosts.

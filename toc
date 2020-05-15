@@ -25,6 +25,5 @@ IBM Cloud Databases
 	reference-iam.md
 	reference-logging.md
 	reference-activity-tracker.md
-	reference-monitoring.md
 	reference-key-protect.md
 	{: .navgroup-end}

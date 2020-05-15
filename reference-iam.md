@@ -13,6 +13,7 @@ subcollection: cloud-databases
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
+{:note: .note} 
 {:tip: .tip}
 
 # Identity and Access Management Integration
@@ -20,8 +21,10 @@ subcollection: cloud-databases
 
 Access to {{site.data.keyword.cloud}} Databases service instances for users in your account is controlled by {{site.data.keyword.cloud_notm}} [Identity and Access Management (IAM)](/docs/iam?topic=iam-getstarted). 
 
-IAM is only integrated with high-level service access and not with database-level users and privileges. Database access is governed by the standard access controls provided by the database. IAM does not control database users.
-{: .tip}
+This document covers the integration of Key Protect with Cloud Databases, which includes {{site.data.keyword.databases-for-elasticsearch}}, {{site.data.keyword.databases-for-etcd}}, {{site.data.keyword.databases-for-mongodb}}, {{site.data.keyword.databases-for-postgresql}}, {{site.data.keyword.databases-for-redis}}, and {{site.data.keyword.messages-for-rabbitmq}}.
+{: .note}
+
+IAM is only integrated with high-level service access, which governs privileges and operations available in the Cloud Databases API and the Cloud Databases CLI plugin. It does not govern database-level users and privileges. Database access is governed by the standard access controls provided by the database. IAM does not control database users.
 
 For information about assigning user roles in {{site.data.keyword.cloud_notm}}, see [Managing IAM access](/docs/iam?topic=iam-iammanidaccser).
 

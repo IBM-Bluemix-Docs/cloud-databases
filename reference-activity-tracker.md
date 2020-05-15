@@ -1,9 +1,9 @@
 ---
 copyright:
-  years: 2019
-lastupdated: "2019-07-09"
+  years: 2019, 2020
+lastupdated: "2020-05-07"
 
-subcollection: cloud-databases
+subcollection: events, auditing
 
 ---
 
@@ -12,12 +12,16 @@ subcollection: cloud-databases
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 {:tip: .tip}
 
 # Activity Tracker Integration
 {: #activity-tracker}
 
-{{site.data.keyword.cloud_notm}} Databases deployments are integrated with Activity Tracker events in [IBM Cloud Activity Tracker with LogDNA](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-about#about), so you can view service-level events.
+{{site.data.keyword.cloud_notm}} Databases deployments are integrated with Activity Tracker events in [IBM Cloud Activity Tracker with LogDNA](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-getting-started), so you can view service-level events.
+
+This document covers the integration of Activity Tracker with Cloud Databases, which includes {{site.data.keyword.databases-for-elasticsearch}}, {{site.data.keyword.databases-for-etcd}}, {{site.data.keyword.databases-for-mongodb}}, {{site.data.keyword.databases-for-postgresql}}, {{site.data.keyword.databases-for-redis}}, and {{site.data.keyword.messages-for-rabbitmq}}.
+{: .note}
 
 Currently, Activity Tracker with LogDNA integration is available for {{site.data.keyword.databases-for}} deployments according to the following table. 
 
@@ -50,9 +54,7 @@ You can access Activity Tracker with LogDNA through the _Observability_ tab of y
 
 Once event activity is being forwarded to the service, each event can be expanded to a detailed view by clicking the arrow to the left of the timestamp.
 
-The LogDNA service offers [searching](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-view_logs#view_logs_step6), [filtering](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-view_logs#view_logs_step5), and [export](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-export#export) of events so you can customize retention for your use-case. 
-
-For more information on features offered by LogDNA, including integrating it with your other {{site.data.keyword.cloud_notm}} services, see [its full documentation](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-about#about).
+The LogDNA service offers [searching](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-view_logs#view_logs_step6), [filtering](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-view_logs#view_logs_step5), and [export](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-export#export) of events so you can customize retention for your use-case. You can also use it to configure [alerts](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-alerts).
 
 ## Event Fields
 

@@ -12,6 +12,7 @@ subcollection: cloud-databases, service endpoints, private endpoints, private ne
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:note: .note}
 {:tip: .tip}
 
 # Service Endpoints Integration
@@ -20,7 +21,9 @@ subcollection: cloud-databases, service endpoints, private endpoints, private ne
 All {{site.data.keyword.databases-for}} deployments offer integration with [{{site.data.keyword.cloud_notm}} Service Endpoints](/docs/resources?topic=resources-service-endpoints#about). It gives you the ability to enable connections to your deployments from the public internet and over the {{site.data.keyword.cloud_notm}} Private network.
 
 Service Endpoints are available in all {{site.data.keyword.cloud_notm}} Multi-Zone Regions and some Single-Zone Regions. If your deployments are in `Osl01`, you aren't able to use private endpoints. Deployments in all other regions are able to use Service Endpoints.
-{: .tip}
+
+This document covers the integration of Key Protect with Cloud Databases, which includes {{site.data.keyword.databases-for-elasticsearch}}, {{site.data.keyword.databases-for-etcd}}, {{site.data.keyword.databases-for-mongodb}}, {{site.data.keyword.databases-for-postgresql}}, {{site.data.keyword.databases-for-redis}}, and {{site.data.keyword.messages-for-rabbitmq}}.
+{: .note}
 
 ## Public Endpoints
 
@@ -46,6 +49,9 @@ To configure your deployment's endpoints on provision, use the _Endpoints_ field
 ### Provisioning from the CLI and API
 
 Service Endpoints are enabled through an optional parameter when you provision through the CLI and API. Provisioning is handled by the Resource Controller, and you pass the `service-endpoints` parameter one of the options `public`, `private`, or `public-and-private`. 
+```
+ibmcloud resource service-instance-create <service-name> --service-endpoints <endpoint-type>
+```
 
 For more information, see the [Provisioning](/docs/cloud-databases?topic=cloud-databases-provisioning) page.
 

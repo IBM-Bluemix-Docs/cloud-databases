@@ -39,7 +39,7 @@ Click the backup to reveal information for that specific backup, including its f
 
 You can also access the list of backups and individual backup information from the {{site.data.keyword.databases-for}} CLI plugin and the {{site.data.keyword.databases-for}} API.
 
-Use the [`cdb deployment-backups-list`](/docs/databases-cli-plugin?topic=cloud-databases-cli-cdb-reference#deployment-backups-list) command to view the list of all available backups for your deployment. To get the details about a specific backup, use [`cdb backup-show`](/docs/databases-cli-plugin?topic=cloud-databases-cli-cdb-reference#backup-show) command.
+Use the [`cdb deployment-backups-list`](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference#deployment-backups-list) command to view the list of all available backups for your deployment. To get the details about a specific backup, use [`cdb backup-show`](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference#backup-show) command.
 
 For example, to view the backups for a deployment named "example-deployment", use the following command.
 
@@ -65,7 +65,7 @@ Deployments come with free backup storage equal to their total disk space. If yo
 
 To create a manual backup in the UI, visit the _Backups_ tab of your deployment then click **Back up now**. A message is displayed that a backup is in progress, and an on-demand backup is added to the list of available backups.
 
-In the CLI, you trigger an on-demand backup with the [`cdb deployment-backup-now`](/docs/databases-cli-plugin?topic=cloud-databases-cli-cdb-reference#deployment-backup-now) command.
+In the CLI, you trigger an on-demand backup with the [`cdb deployment-backup-now`](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference#deployment-backup-now) command.
 ```
 ibmcloud cdb deployment-backup-now example-deployment
 ```

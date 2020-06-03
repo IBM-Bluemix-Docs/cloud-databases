@@ -15,7 +15,7 @@ subcollection: cloud-databases
 {:tip: .tip}
 
 
-# Tutorial - Connecting a Cloud Foundry Application
+# An example Cloud Foundry Application
 {: #tutorial-cf-app}
 
 This tutorial uses a [sample app](https://github.com/IBM-Cloud/clouddatabases-helloworld-cloudfoundry-examples) to demonstrate how to connect a Cloud Foundry application in {{site.data.keyword.cloud_notm}} to a {{site.data.keyword.databases-for}} deployment. The application creates, reads from, and writes to a database that uses data that is supplied through the app's web interface.

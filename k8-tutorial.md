@@ -12,7 +12,7 @@ lastupdated: "2019-02-12"
 {:tip: .tip}
 
 
-# Tutorial - Connecting a {{site.data.keyword.containershort_notm}} Application
+# An example {{site.data.keyword.containershort_notm}} Application
 {: #tutorial-k8s-app}
 
 The [{{site.data.keyword.databases-for}} "Hello World" Kubernetes examples](https://github.com/IBM-Cloud/clouddatabases-helloworld-kubernetes-examples) are sample {{site.data.keyword.cloud}} applications that show you how to connect to a {{site.data.keyword.databases-for}} deployment to an {{site.data.keyword.containerlong_notm}} application written in a various programming languages.

@@ -12,8 +12,11 @@ IBM Cloud Databases
 	howto-provisioning.md
 	howto-manage-backups.md
 	howto-whitelists.md
-	k8-tutorial.md
-	cf-tutorial.md
+
+	{: .topicgroup}
+	Tutorials
+		k8-tutorial.md
+		cf-tutorial.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}

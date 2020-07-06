@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2019
-lastupdated: "2019-04-05"
+  years: 2019, 2020
+lastupdated: "2020-07-06"
 
 subcollection: cloud-databases
 
@@ -23,6 +23,7 @@ subcollection: cloud-databases
 
 {{site.data.keyword.databases-for}} cover the following services:
 - {{site.data.keyword.databases-for-elasticsearch}}
+- {{site.data.keyword.databases-for-enterprisedb}}
 - {{site.data.keyword.databases-for-etcd}}
 - {{site.data.keyword.databases-for-mongodb}}
 - {{site.data.keyword.databases-for-postgresql}}

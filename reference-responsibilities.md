@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-11-22"
+  years: 2019, 2020
+lastupdated: "2020-06-25"
 
 subcollection: cloud-databases
 
@@ -22,7 +22,7 @@ subcollection: cloud-databases
 Learn about the management responsibilities and terms and conditions that you have when you use {{site.data.keyword.cloud}} {{site.data.keyword.databases-for}}. For a high-level view of the service types in {{site.data.keyword.cloud_notm}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} offerings](/docs/overview?topic=overview-shared-responsibilities).
 {:shortdesc}
 
-This document covers all the Cloud Databases, which includes {{site.data.keyword.databases-for-elasticsearch}}, {{site.data.keyword.databases-for-etcd}}, {{site.data.keyword.databases-for-mongodb}}, {{site.data.keyword.databases-for-postgresql}}, {{site.data.keyword.databases-for-redis}}, and {{site.data.keyword.messages-for-rabbitmq}}.
+This document covers all the Cloud Databases, which includes {{site.data.keyword.databases-for-elasticsearch}}, {{site.data.keyword.databases-for-enterprisedb}}, {{site.data.keyword.databases-for-etcd}}, {{site.data.keyword.databases-for-mongodb}}, {{site.data.keyword.databases-for-postgresql}}, {{site.data.keyword.databases-for-redis}}, and {{site.data.keyword.messages-for-rabbitmq}}.
 {: .note}
 
 Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use {{site.data.keyword.databases-for}}. For the overall terms of use, see [{{site.data.keyword.cloud_notm}} Terms and Notices](/docs/overview/terms-of-use?topic=overview-terms).
@@ -62,6 +62,6 @@ Review the following sections for the specific responsibilities for you and for 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
 |Backups|{{site.data.keyword.databases-for}} is responsible for automatic backups and storing them in cross-region Cloud Object Store instances. | The Customer is responsible for testing the validity and restore time of the backups. |
-|Read-only replicas, {{site.data.keyword.databases-for-postgresql}} ONLY| {{site.data.keyword.databases-for-postgresql}} is responsible for providing the capability of deploying read-only replicas across regions (with the exception of replicating data outside of `eu-de`). | The Customer is responsible for provisioning, configuring, monitoring, and promoting read-only replicas. |
+|Read-only replicas, {{site.data.keyword.databases-for-postgresql}} and {{site.data.keyword.databases-for-enterprisedb}} ONLY| {{site.data.keyword.databases-for-postgresql}} and {{site.data.keyword.databases-for-enterprisedb}} are responsible for providing the capability of deploying read-only replicas across regions (with the exception of replicating data outside of `eu-de`). | The Customer is responsible for provisioning, configuring, monitoring, and promoting read-only replicas. |
 {: caption="Table 5. Responsibilities for disaster recovery" caption-side="top"}
 

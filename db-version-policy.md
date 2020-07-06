@@ -1,7 +1,7 @@
 ---
 Copyright:
-  years: 2018, 2019
-lastupdated: "2019-04-19"
+  years: 2018, 2019, 2020
+lastupdated: "2020-06-25"
 ---
 
 {:new_window: target="_blank"}
@@ -46,6 +46,7 @@ At the end of the transition window, deprecated major versions cannot be deploye
 Database|Versioning Schema
 ----------|---------
 Elasticsearch|Major versions are the first number in a `release.version.maintenance` version number.
+EnterpriseDB|Major version is defined by the first number in the version number.
 etcd|Major versions are the first number in a `major.minor.patch` version number.
 MongoDB|Major versions are the first two numbers in a `major.x.patch` version number. In cases where `x` is even, it is a stable release suitable for production. Even `x` versions are the only ones available on {{site.data.keyword.databases-for}}.
 PostgreSQL*|Major version is defined by the first number in the version number.

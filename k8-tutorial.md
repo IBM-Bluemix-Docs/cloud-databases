@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2019
-lastupdated: "2019-02-12"
+  years: 2019, 2020
+lastupdated: "2019-06-25"
 ---
 
 {:new_window: target="_blank"}
@@ -72,7 +72,7 @@ Once the branch has been cloned, you can select the appropriate directory for th
 
 6. Create your database deployment.
 
-    The database can be created from the command line using the `ibmcloud resource service-instance-create` command. The command takes a service instance name, a service name, plan name, and location. The service name is one of the {{site.data.keyword.databases-for}} services, `databases-for-elasticsearch`, `databases-for-etcd`, `databases-for-mongodb`, databases-for-postgresql`, `databases-for-redis`, or `messages-for-rabbitmq`.
+    The database can be created from the command line using the `ibmcloud resource service-instance-create` command. The command takes a service instance name, a service name, plan name, and location. The service name is one of the {{site.data.keyword.databases-for}} services, `databases-for-elasticsearch`, `databases-for-enterprisedb`, `databases-for-etcd`, `databases-for-mongodb`, `databases-for-postgresql`, `databases-for-redis`, or `messages-for-rabbitmq`.
 
     ```shell
     ibmcloud resource service-instance-create <your_deployment_name> <service_name> standard <region>

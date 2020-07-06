@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-05-04"
+lastupdated: "2020-06-25"
 
 keywords: provision cloud databases, databases with terraform, provisioning parameters
 
@@ -27,6 +27,7 @@ You can provision a deployment by visiting the service's catalog page or by spec
 Deployment Type|Catalog Page|Service ID
 ----------|-----|-----------
 Databases for Elasticsearch|[Link](https://cloud.ibm.com/catalog/services/databases-for-elasticsearch)|`databases-for-elasticsearch`
+Databases for EnterpriseDB|[Link](https://cloud.ibm.com/catalog/services/databases-for-enterprisedb)|`databases-for-enterprisedb`
 Databases for etcd|[Link](https://cloud.ibm.com/catalog/services/databases-for-etcd)|`databases-for-etcd`
 Databases for MongoDB|[Link](https://cloud.ibm.com/catalog/services/databases-for-mongodb)|`databases-for-mongodb`
 Databases for PostgreSQL|[Link](https://cloud.ibm.com/catalog/services/databases-for-postgresql)|`databases-for-postgresql`
@@ -47,7 +48,7 @@ Users can optionally set:
 1. **The resource group** - If you are organizing your services into [resource groups](/docs/resources?topic=resources-bp_resourcegroups), you can specify the resource group in this field. Otherwise, you can leave it at default.
 2. **Key Protect instance and disk encryption key** - If you use Key Protect, an instance and key can be selected to encrypt the deployment's disk. If you do not use your own key, the deployment automatically creates and manages its own disk encryption key.
 3. **Initial resource allocation** - Specify initial memory and disk sizes for your databases. The minimum sizes of memory and disk are selected by default. 
-4. **CPU allocation** - Choose dedicated compute resources for your deployment. With dedicated cores, your resource group is given a single-tenant host with a guaranteed minimum reserve of cpu shares. Your deployments are then allocated the number of CPUs you specify. The default `Shared CPU` uses compute resources on shared hosts.
+4. **CPU allocation** - Choose dedicated compute resources for your deployment. With dedicated cores, your resource group is given a single-tenant host with a guaranteed minimum reserve of cpu shares. Your deployments are then allocated the number of CPUs you specify. This defaults to the minimum allocation if not specified in the provisioning request by using the API or CLI.
 5. **Endpoints** - You can configure the types [Service Endpoints](/docs/cloud-databases?topic=cloud-databases-service-endpoints) on your deployment. The default is that connections to your deployment can be made from the public network.
 
 Once you select the appropriate settings, click **Create** to start the provisioning process. 
@@ -132,3 +133,4 @@ If you use Terraform to manage your infrastructure, the [{{site.data.keyword.clo
 * `members_disk_allocation_mb` - Total amount of disk to be shared between the database members within the database. For example, if the value is "30720", and there are three members, then the deployment gets 30 GB of disk total, giving 10 GB of disk per member. If omitted, the default value for the database type is used.
 * `members_cpu_allocation_count` - Enables and allocates the number of specified dedicated cores to your deployment. For example, to use two dedicated cores per member, use `"members_cpu_allocation_count":"2"`. If omitted, the default value "Shared CPU" uses compute resources on shared hosts.
 * `service-endpoints` - Selects the types [Service Endpoints](/docs/cloud-databases?topic=cloud-databases-service-endpoints) supported on your deployment. Options are `public`, `private`, or `public-and-private`. If omitted, the default is `public`. Note that in the CLI, `service-endpoints` is a flag, and not a parameter.
+* `{"remote_leader_id": "crn:v1:..."}` - parameter only for {site.data.keyword.databases-for-postgresql_full}} or {{site.data.keyword.databases-for-enterprisedb_full}}. Details on using this parameter for provisioning read-only replicas can be found in the corresponding `Configuring Read-only Replicas` sections of the [PostgreSQL](/docs/services/databases-for-postgresql?topic=databases-for-postgresql-read-replica) and [EnterpriseDB](/docs/services/databases-for-enterprisedb?topic=databases-for-enterprisedb-read-replica) documentation. 

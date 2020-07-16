@@ -41,9 +41,10 @@ Authorize {{site.data.keyword.keymanagementserviceshort}} for use with {{site.da
 5. In the **Source service** menu, select the service of the deployment. For example, **Databases for PostgreSQL** or **Messages for RabbitMQ**
 6. In the **Source service instance** menu, select **All service instances**.
 7. In the **Target service** menu, select **Key Protect**.
-8. In the **Target service instance** menu, select the service instance to authorize.
-9. Enable the **Reader** role.
-10. Click **Authorize**.
+8. Select or retain the default value **`Account`** as the resource group for the **Target Service**
+9.  In the **Target service instance** menu, select the service instance to authorize.
+10. Enable the **Reader** role.
+11. Click **Authorize**.
 
 If the service authorization is not present before provisioning your deployment with a key, the provision fails.
 

@@ -39,12 +39,13 @@ Authorize {{site.data.keyword.keymanagementserviceshort}} for use with {{site.da
 3. In the side navigation, click **Authorizations**.
 4. Click **Create**.
 5. In the **Source service** menu, select the service of the deployment. For example, **Databases for PostgreSQL** or **Messages for RabbitMQ**
-6. In the **Source service instance** menu, select **All service instances**.
+6. In the **Source service instance** menu, select **All instances**.
 7. In the **Target service** menu, select **Key Protect**.
 8. Select or retain the default value **`Account`** as the resource group for the **Target Service**
-9.  In the **Target service instance** menu, select the service instance to authorize.
+9. In the Target service **Instance ID** menu, select the service instances to authorize.
 10. Enable the **Reader** role.
-11. Click **Authorize**.
+11. To use "Bring your own key" (BYOK) for backups, Select the **Enable authorizations to be delegated** box in the **Authorize dependent services** section.  
+12. Click **Authorize**.
 
 If the service authorization is not present before provisioning your deployment with a key, the provision fails.
 

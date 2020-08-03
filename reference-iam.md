@@ -98,7 +98,7 @@ POST /v4/ibm/deployments/:deployment_id/users/:user_id/connections/:endpoint_typ
 Create deployment user connections
 ---
 GET /v4/ibm/deployments/:deployment_id/whitelists/ip_addresses
-Read Whitelisted IP Addresses
+Read Allowlisted IP Addresses
 ```
 
 ### Operator and Editor
@@ -187,16 +187,16 @@ POST /v4/ibm/deployments/:deployment_id/users/:user_id/connections/:endpoint_typ
 Create deployment user connections
 ---
 GET /v4/ibm/deployments/:deployment_id/whitelists/ip_addresses
-Read Whitelisted IP Addresses
+Read Allowlisted IP Addresses
 ---
 POST /v4/ibm/deployments/:deployment_id/whitelists/ip_addresses
-Create a Whitelisted IP Addresses
+Create an Allowlisted IP Addresses
 ---
 DELETE /v4/ibm/deployments/:deployment_id/whitelists/ip_addresses/:ip_address_id
-Remove a Whitelisted IP Addresses
+Remove an Allowlisted IP Addresses
 ---
 PUT /v4/ibm/deployments/:deployment_id/whitelists/ip_addresses
-Bulk whitelist IP addresses
+Bulk allowlist IP addresses
 ---
 POST /v4/ibm/deployments/:deployment_id/elasticsearch/file_syncs
 Create elasticsearch file sync
@@ -288,16 +288,16 @@ POST /v4/ibm/deployments/:deployment_id/users/:user_id/connections/:endpoint_typ
 Create deployment user connections
 ---
 GET /v4/ibm/deployments/:deployment_id/whitelists/ip_addresses
-Read Whitelisted IP Addresses
+Read Allowlisted IP Addresses
 ---
 POST /v4/ibm/deployments/:deployment_id/whitelists/ip_addresses
-Create a Whitelisted IP Addresses
+Create an Allowlisted IP Addresses
 ---
 DELETE /v4/ibm/deployments/:deployment_id/whitelists/ip_addresses/:ip_address_id
-Remove a Whitelisted IP Addresses
+Remove an Allowlisted IP Addresses
 ---
 PUT /v4/ibm/deployments/:deployment_id/whitelists/ip_addresses
-Bulk whitelist IP addresses
+Bulk allowlist IP addresses
 ---
 POST /v4/ibm/deployments/:deployment_id/elasticsearch/file_syncs
 Create elasticsearch file sync

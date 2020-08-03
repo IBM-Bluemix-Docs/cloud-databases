@@ -53,7 +53,7 @@ Review the following sections for the specific responsibilities for you and for 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
 |Encryption| {{site.data.keyword.databases-for}} is responsible for the encryption of data on disk, in motion, and in backups. | The Customer is responsible for choosing and managing appropriate additional security features. If using Key Protect and Bring Your Own Key (BYOK), the customer is responsible for managing Key Protect authorizations and keys. |
-|Security| {{site.data.keyword.databases-for}} is responsible for ensuring the security of data on disk and data in motion within our infrastructure. | The Customer is responsible for managing {{site.data.keyword.cloud_notm}} passwords and database passwords, and keeping passwords secure. The Customer is also responsible for configuring appropriate network security/isolation (ex. IP whitelisting, private endpoints). |
+|Security| {{site.data.keyword.databases-for}} is responsible for ensuring the security of data on disk and data in motion within our infrastructure. | The Customer is responsible for managing {{site.data.keyword.cloud_notm}} passwords and database passwords, and keeping passwords secure. The Customer is also responsible for configuring appropriate network security/isolation (ex. IP allowlisting, private endpoints). |
 {: caption="Table 4. Responsibilities for security and regulation compliance" caption-side="top"}
 
 ## Disaster recovery

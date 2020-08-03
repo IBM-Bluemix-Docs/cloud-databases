@@ -6,12 +6,13 @@ IBM Cloud Databases
 
 	{: .navgroup id="learn"}
 	index.md
+	learn-size-guidance.md
 	{: .navgroup-end}
 
 	{: .navgroup id="howto"}
 	howto-provisioning.md
 	howto-manage-backups.md
-	howto-whitelists.md
+	howto-allowlists.md
 
 	{: .topicgroup}
 	Tutorials

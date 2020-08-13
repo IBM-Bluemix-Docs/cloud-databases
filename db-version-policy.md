@@ -1,7 +1,7 @@
 ---
 Copyright:
   years: 2018, 2019, 2020
-lastupdated: "2020-06-25"
+lastupdated: "2020-08-04"
 ---
 
 {:new_window: target="_blank"}
@@ -45,6 +45,7 @@ At the end of the transition window, deprecated major versions cannot be deploye
 
 Database|Versioning Schema
 ----------|---------
+DataStax|Major versions are the first number in a `major.minor.patch` version number.
 Elasticsearch|Major versions are the first number in a `release.version.maintenance` version number.
 EnterpriseDB|Major version is defined by the first number in the version number.
 etcd|Major versions are the first number in a `major.minor.patch` version number.

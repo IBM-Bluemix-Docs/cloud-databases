@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-25"
+lastupdated: "2020-08-04"
 
 keywords: provision cloud databases, databases with terraform, provisioning parameters
 
@@ -26,6 +26,7 @@ You can provision a deployment by visiting the service's catalog page or by spec
 
 Deployment Type|Catalog Page|Service ID
 ----------|-----|-----------
+Databases for DataStax|[Link](https://cloud.ibm.com/catalog/services/databases-for-cassandra)|`databases-for-datastax`
 Databases for Elasticsearch|[Link](https://cloud.ibm.com/catalog/services/databases-for-elasticsearch)|`databases-for-elasticsearch`
 Databases for EnterpriseDB|[Link](https://cloud.ibm.com/catalog/services/databases-for-enterprisedb)|`databases-for-enterprisedb`
 Databases for etcd|[Link](https://cloud.ibm.com/catalog/services/databases-for-etcd)|`databases-for-etcd`

@@ -3,7 +3,9 @@ Copyright:
   years: 2019, 2020
 lastupdated: "2020-08-04"
 
-subcollection: cloud-databases, service endpoints, private endpoints, private networking
+subcollection: cloud-databases
+
+keywords: service endpoints, private endpoints, private networking
 
 ---
 

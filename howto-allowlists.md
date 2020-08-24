@@ -2,9 +2,11 @@
 
 Copyright:
   years: 2019, 2020
-lastupdated: "2020-08-3"
+lastupdated: "2020-08-03"
 
-subcollection: cloud-databases, allowlist, ip addresses, blocklist
+subcollection: cloud-databases
+
+keywords: allowlist, ip addresses, blocklist
 
 ---
 

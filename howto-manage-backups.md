@@ -4,7 +4,9 @@ copyright:
   years: 2019
 lastupdated: "2019-09-17"
 
-subcollection: cloud-databases, backups
+subcollection: cloud-databases
+
+keywords: backups
 
 ---
 

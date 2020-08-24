@@ -3,7 +3,9 @@ copyright:
   years: 2019, 2020
 lastupdated: "2020-08-04"
 
-subcollection: database logs
+subcollection: cloud-databases
+
+keywords: database logs
 
 ---
 

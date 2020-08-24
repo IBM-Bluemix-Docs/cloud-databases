@@ -3,7 +3,9 @@ copyright:
   years: 2019, 2020
 lastupdated: "2020-08-05"
 
-subcollection: cloud-databases, bring you own key, byok, cryptoshredding
+subcollection: cloud-databases
+
+keywords: bring your own key, byok, cryptoshredding
 
 ---
 

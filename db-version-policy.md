@@ -43,20 +43,20 @@ At the end of the transition window, deprecated major versions cannot be deploye
 
 ## Major versions defined
 
-Database|Versioning Schema
-----------|---------
-DataStax|Major versions are the first number in a `major.minor.patch` version number.
-Elasticsearch|Major versions are the first number in a `release.version.maintenance` version number.
-EnterpriseDB|Major version is defined by the first number in the version number.
-etcd|Major versions are the first number in a `major.minor.patch` version number.
-MongoDB|Major versions are the first two numbers in a `major.x.patch` version number. In cases where `x` is even, it is a stable release suitable for production. Even `x` versions are the only ones available on {{site.data.keyword.databases-for}}.
-PostgreSQL*|Major version is defined by the first number in the version number.
-Redis|Major versions are the first number in a `major.minor.patch` version number.
-RabbitMQ|Major versions are the first two numbers in a `major.x.patch` version number.
+Database|Versioning Schema|Next Known End of Life Version and Date
+----------|---------|---------
+DataStax|Major versions are the first number in a `major.minor.patch` version number.| v6.7, unplanned
+Elasticsearch|Major versions are the first number in a `release.version.maintenance` version number.|v6.8, unplanned
+EnterpriseDB|Major version is defined by the first number in the version number.| v12, December 2024
+etcd|Major versions are the first number in a `major.minor.patch` version number.| v3.3, unplanned
+MongoDB|Major versions are the first two numbers in a `major.x.patch` version number. In cases where `x` is even, it is a stable release suitable for production. Even `x` versions are the only ones available on {{site.data.keyword.databases-for}}.| v3.6, April 2021
+PostgreSQL*|Major version is defined by the first number in the version number.| v9.5, February 2021 
+Redis|Major versions are the first number in a `major.minor.patch` version number.| v4.0, unplanned
+RabbitMQ|Major versions are the first two numbers in a `major.x.patch` version number.| v3.7, [September 2020](https://www.ibm.com/cloud/blog/announcements/retiring-messages-for-rabbitmq-3-7)
 {: caption="Table 1. Major versions for {{site.data.keyword.databases-for}}" caption-side="top"}
 
-
-* There was a change of versioning scheme for PostgreSQL after version 9.6. Before and including version 9.6, a PostgreSQL major version was defined by the first two numbers in the version.
+*There was a change of versioning scheme for PostgreSQL after version 9.6. Before and including version 9.6, a PostgreSQL major version was defined by the first two numbers in the version.
+{: .note}
 
 ## Minor versions
 

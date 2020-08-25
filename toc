@@ -11,6 +11,7 @@ IBM Cloud Databases
 
 	{: .navgroup id="howto"}
 	howto-provisioning.md
+	howto-deprovisioning.md
 	howto-manage-backups.md
 	howto-allowlists.md
 

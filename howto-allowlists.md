@@ -6,7 +6,7 @@ lastupdated: "2020-08-03"
 
 subcollection: cloud-databases
 
-keywords: allowlist, ip addresses, blocklist
+keywords: allowlist, ip addresses, blocklist, whitelist
 
 ---
 

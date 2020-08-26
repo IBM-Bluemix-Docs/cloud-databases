@@ -84,13 +84,13 @@ ibmcloud resource service-instance-create <service-name> --service-endpoints <en
 
 The `service-instance-create` command supports a `-p` flag, which allows [additional parameters](#list-of-additional-parameters) to be passed to the provisioning process. The parameters are in JSON format. Some parameters values are CRNs (Cloud Resource Name), which uniquely identifies a resource in the cloud. All parameter names and values are passed as strings.
 
-For example, if a database is being provisioned from a particular backup and the new database deployment needs 6 GB of memory, then the command looks like:
+For example, if a database is being provisioned from a particular backup and the new database deployment needs a total of 6 GB of memory across two members, then the command to provision 3 GB per member looks like:
 
 ```
 ibmcloud resource service-instance-create example-database <service-name> standard us-south \
 -p \ '{
   "backup_id": "crn:v1:bluemix:public:databases-for:us-south:a/54e8ffe85dcedf470db5b5ee6ac4a8d8:1b8f53db-fc2d-4e24-8470-f82b15c71717:backup:06392e97-df90-46d8-98e8-cb67e9e0a8e6",
-  "members_memory_allocation_mb": "6144"
+  "members_memory_allocation_mb": "3072"
 }'
 ```
 

@@ -85,7 +85,7 @@ In the API, you can use the [`/deployments/{id}/users/{userid}/connections/{endp
 
 If you only have private endpoints on your deployments, then all new credentials have private endpoints in the connection strings.
 
-### Connecting Through Private Endpoints
+## Connecting Through Private Endpoints
 {: #private-endpoint-connections}
 
 {{site.data.keyword.cloud}} Databases offer both private and public cloud service endpoints. If you want to run your application or access the end point from a browser that is not on the private network, you must take these additional steps: 

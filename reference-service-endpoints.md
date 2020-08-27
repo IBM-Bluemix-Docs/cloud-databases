@@ -84,3 +84,15 @@ When you create credentials in _Service Credentials_, use the either the `{ "ser
 In the API, you can use the [`/deployments/{id}/users/{userid}/connections/{endpoint_type}`](https://{DomainName}/apidocs/cloud-databases-api#discover-connection-information-for-a-deployment-f-e81026) to retrieve connection strings for both public or private endpoints.
 
 If you only have private endpoints on your deployments, then all new credentials have private endpoints in the connection strings.
+
+### Connecting Through Private Endpoints
+{: #private-endpoint-connections}
+
+{{site.data.keyword.cloud}} Databases offer both private and public cloud service endpoints. If you want to run your application or access the end point from a browser that is not on the private network, you must take these additional steps: 
+  
+* Ensure your Cloud IaaS / SL account is [enabled for private endpoints](https://cloud.ibm.com/docs/account?topic=account-service-endpoints-overview).
+* Create a virtual machine (VSI) that runs Linux
+* Configure a user account with SSH access
+* From your workstation, run `ssh -D 2345 user@vsi-host` This starts an SSH session and open a SOCKS proxy on port 2345 that forwards all traffic through the VSI
+* Configure your browser or application to use a SOCKS5 proxy on `localhost:2345`
+* Run your application or open the desired private-endpoint in your browser (for example, a management UI).

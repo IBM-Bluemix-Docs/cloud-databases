@@ -48,12 +48,15 @@ For example, to view the backups for a deployment named "example-deployment", us
 ```
 ibmcloud cdb deployment-backups-list example-deployment
 ```
+{: .pre}
 
 To see the details of one of the backups from the list, take the ID from the `ID` field of the `deployment-backups-list` response and use it with the `backup-show` command.
 
 ```
 ibmcloud cdb backup-show crn:v1:staging:public:cloud-databases:us-south:a/6284014dd5b487c87a716f48aeeaf99f:3b4537bf-a585-4594-8262-2b1e24e2701e:backup:a3364821-d061-413f-a0df-6ba0e2951566
 ```
+{: .pre}
+
 ## Backups in the API
 
 For backups information in the {{site.data.keyword.databases-for}} API, use the [`/deployments/{id}/backups`](https://cloud.ibm.com/apidocs/cloud-databases-api#get-currently-available-backups-from-a-deployment) endpoint to list the deployment's backups. Use the [`/backups/{backup_id}`](https://{DomainName}/apidocs/cloud-databases-api#get-information-about-a-backup) endpoint to get information about a specific backup.
@@ -91,7 +94,7 @@ To restore a backup to a new service instance,
 2. Click the **Restore** button.
 3. Use the dialog box to select from some available options. 
   - The new deployment is automatically named `<name>-restore-[timestamp]`, but you can rename it. 
-  - You can also select the region where the new deployment is located. Cross-region restores are supported, with the exception of restoring a `eu-de` backup to another region.
+  - You can also select the region where the new deployment is located. Cross-region restores are supported, with the exception of restoring into or out of the `eu-de` region.
   - You can choose the initial resource allocation, either to expand or shrink the resources on the new deployment. You can also enable or disable dedicated cores.
 4. Click the **Restore** button. A "restore from backup started" message appears. Clicking on **Your new instance is available now.** takes you to your _Resources List_.
 
@@ -102,6 +105,7 @@ The Resource Controller supports provisioning of database deployments, and provi
 ```
 ibmcloud resource service-instance-create <SERVICE_INSTANCE_NAME> <service-id> standard <region> -p '{"backup_id":"BACKUP_ID"}'
 ```
+{: .pre}
 
 Change the value of `SERVICE_INSTANCE_NAME` to the name you want for your new deployment. The `service-id` is the type of deployment, such as `databases-for-postgresql` or `messages-for-rabbitmq`. The `region` is where you want the new deployment to be located, which can be a different region from the source deployment. Cross-region restores are supported, with the exception of restoring a `eu-de` backup to another region. `BACKUP_ID` is the backup that you want to restore.
 
@@ -110,6 +114,7 @@ Optional parameters are available when restoring through the CLI. Use them if yo
 ibmcloud resource service-instance-create <SERVICE_INSTANCE_NAME> <service-id> standard <region> -p
 '{"backup_id":"BACKUP_ID","key_protect_key":"KEY_PROTECT_KEY_CRN", "members_disk_allocation_mb":"DESIRED_DISK_IN_MB", "members_memory_allocation_mb":"DESIRED_MEMORY_IN_MB", "members_cpu_allocation_count":"NUMBER_OF_CORES"}'
 ```
+{: .pre}
 
 A pre-formatted command for a specific backup is available in detailed view of the backup on the _Backups_ tab of your deployment dashboard.
 {: .tip}
@@ -135,6 +140,8 @@ curl -X POST \
     }
   }'
 ```
+{: .pre}
+
 The parameters `name`, `target`, `resource_group`, and `resource_plan_id` are all required, and `backup_id` is the backup you want to restore. The `target` is the region where you want the new deployment to be located, which can be a different region from the source deployment. Cross-region restores are supported, with the exception of restoring a `eu-de` backup to another region.
 
 If you need to adjust resources or use a Key Protect key, add the optional parameters `key_protect_key`, `members_disk_allocation_mb`, `members_memory_allocation_mb`, and/or `members_cpu_allocation_count`, and their desired values to the body of the request.

@@ -26,7 +26,7 @@ Backups for {{site.data.keyword.databases-for}} deployments are accessible from 
 - Backups cannot be deleted. 
 - If you delete your deployment, its backups are deleted automatically.
 - Scheduling of the daily backup is not configurable.
-- Backups are cross-regionally durable. Backups are stored across multiple regions, and are restorable to other regions.
+- Backups are cross-regionally durable. Backups are stored across multiple regions, and are restorable to other regions, with the exception of `eu-de` which cannot cross regional boundaries.
 - Backup storage is encrypted. If you need to manage the encryption keys, you can do so with the [Key Protect integration](/docs/cloud-databases?topic=cloud-databases-key-protect#byok-for-backups). Otherwise, they are encrypted with a key automatically generated for your deployment.
 
 ## Backups in the UI
@@ -74,6 +74,7 @@ In the CLI, you trigger an on-demand backup with the [`cdb deployment-backup-now
 ```
 ibmcloud cdb deployment-backup-now example-deployment
 ```
+{: .pre}
 
 In the API, sending a POST to the [`/deployments/{id}/backups`](https://cloud.ibm.com/apidocs/cloud-databases-api#initiate-an-on-demand-backup) endpoint triggers an on-demand backup.
 
@@ -107,7 +108,7 @@ ibmcloud resource service-instance-create <SERVICE_INSTANCE_NAME> <service-id> s
 ```
 {: .pre}
 
-Change the value of `SERVICE_INSTANCE_NAME` to the name you want for your new deployment. The `service-id` is the type of deployment, such as `databases-for-postgresql` or `messages-for-rabbitmq`. The `region` is where you want the new deployment to be located, which can be a different region from the source deployment. Cross-region restores are supported, with the exception of restoring a `eu-de` backup to another region. `BACKUP_ID` is the backup that you want to restore.
+Change the value of `SERVICE_INSTANCE_NAME` to the name you want for your new deployment. The `service-id` is the type of deployment, such as `databases-for-postgresql` or `messages-for-rabbitmq`. The `region` is where you want the new deployment to be located, which can be a different region from the source deployment. Cross-region restores are supported, with the exception of restoring to or from `eu-de` using another region. `BACKUP_ID` is the backup that you want to restore.
 
 Optional parameters are available when restoring through the CLI. Use them if you need to customize resources, or use a Key Protect key for BYOK encryption on the new deployment.
 ```
@@ -142,7 +143,7 @@ curl -X POST \
 ```
 {: .pre}
 
-The parameters `name`, `target`, `resource_group`, and `resource_plan_id` are all required, and `backup_id` is the backup you want to restore. The `target` is the region where you want the new deployment to be located, which can be a different region from the source deployment. Cross-region restores are supported, with the exception of restoring a `eu-de` backup to another region.
+The parameters `name`, `target`, `resource_group`, and `resource_plan_id` are all required, and `backup_id` is the backup you want to restore. The `target` is the region where you want the new deployment to be located, which can be a different region from the source deployment. Cross-region restores are supported, with the exception of restoring into or out of the `eu-de` region.
 
 If you need to adjust resources or use a Key Protect key, add the optional parameters `key_protect_key`, `members_disk_allocation_mb`, `members_memory_allocation_mb`, and/or `members_cpu_allocation_count`, and their desired values to the body of the request.
 

@@ -62,6 +62,6 @@ Review the following sections for the specific responsibilities for you and for 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
 |Backups|{{site.data.keyword.databases-for}} is responsible for automatic backups and storing them in cross-region Cloud Object Store instances. | The Customer is responsible for testing the validity and restore time of the backups. |
-|Read-only replicas, {{site.data.keyword.databases-for-postgresql}} and {{site.data.keyword.databases-for-enterprisedb}} ONLY| {{site.data.keyword.databases-for-postgresql}} and {{site.data.keyword.databases-for-enterprisedb}} are responsible for providing the capability of deploying read-only replicas across regions (with the exception of replicating data outside of `eu-de`). | The Customer is responsible for provisioning, configuring, monitoring, and promoting read-only replicas. |
+|Read-only replicas, {{site.data.keyword.databases-for-postgresql}} and {{site.data.keyword.databases-for-enterprisedb}} ONLY| {{site.data.keyword.databases-for-postgresql}} and {{site.data.keyword.databases-for-enterprisedb}} are responsible for providing the capability of deploying read-only replicas across regions (with the exception of replicating data into or outside of `eu-de`). | The Customer is responsible for provisioning, configuring, monitoring, and promoting read-only replicas. |
 {: caption="Table 5. Responsibilities for disaster recovery" caption-side="top"}
 

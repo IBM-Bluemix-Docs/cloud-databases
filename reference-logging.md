@@ -42,7 +42,7 @@ Deployment Region | Log Analysis Region
 
 Logs from your deployments appear in a Log Analysis instance in the same region, except for `osl01`, and `seo01`. Deployments in `osl01` have their logs forwarded to `eu-gb`. Deployments in `seo01` have their logs forwarded to `jp-tok`. If you have deployments in multiple regions, you must set up Log Analysis in multiple regions. 
 
-After September 15th, {{site.data.keyword.databases-for}} in the Chennai region will begin sending Platform logs from our databases to the Logging with LogDNA services in Chennai rather than Tokyo. This is to ensure database logs for Chennai remain in the Chennai region.
+After September 15th 2020, IBM {{site.data.keyword.databases-for}} in the Chennai region will begin sending Platform logs from our databases to the Logging with LogDNA services in Chennai rather than Tokyo. This is to ensure database logs for Chennai remain in the Chennai region.
 {: .note}
 
 ## Provisioning {{site.data.keyword.la_full_notm}}

@@ -42,7 +42,7 @@ ibmcloud resource service-instance-delete my-service-instance
 Using the command `ibmcloud resource reclamation-delete` deletes a reclaimed resource so that the resource can no longer be restored.
 {: .note}
 
-## Cryptoshredding
+## Cryptoshredding keys
 
 {{site.data.keyword.keymanagementserviceshort}} provides for a [force delete](/docs/key-protect?topic=key-protect-delete-keys) of a key that is in use by {{site.data.keyword.cloud}} services, including your {{site.data.keyword.databases-for}} deployments. This action is called cryptoshredding. 
 
@@ -51,7 +51,7 @@ Cryptoshredding is a destructive action. When the key is deleted, your data is u
 
 ## Backups Removal
 
-Backups cannot be manually deleted. However, if you delete your deployment its backups are deleted automatically. 
+Backups cannot be manually deleted. However, if you delete your deployment, its backups are deleted automatically. 
 
 ## Reenabling from a soft delete
 {: #reclamation}

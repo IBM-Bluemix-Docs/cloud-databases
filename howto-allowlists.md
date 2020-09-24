@@ -23,14 +23,14 @@ keywords: allowlist, ip addresses, blocklist, whitelist
 
 If you want to restrict access to your databases, you can allowlist specific IP addresses or ranges of IP addresses on your deployment.
 
-If you use allowlisting in your environment, you can allowlist our services using the list of subnets for each region.
+If you use allowlisting in your environment, you can allowlist our services by using the list of subnets for each region.
 
-We have updated documentation to reflect changes in terminology from `whitelist` to `allowlist`. You will encounter continued references to this former terminolgy while we work to implement these deeper changes to code, API, and CLI commands. 
+We updated documentation to reflect changes in terminology from `whitelist` to `allowlist`. You will encounter continued references to this former terminology while we work to implement these deeper changes to code, API, and CLI commands. 
 {: .note}
 
 ## Using IP allowlisting on your Deployment
 
-When you create an allowlist, only IP addresses that match the allowlist or are in the range of IP addresses in the allowlist can connect to your deployment. allowlists can be enabled for both public endpoints and private endpoints. When no IP addresses are in the allowlist, the allowlist is disabled and the deployment accepts connections from any IP address.
+When you create an allowlist, only IP addresses that match the allowlist or are in the range of IP addresses in the allowlist can connect to your deployment. allowlists can be enabled for both public endpoints and private endpoints. When no IP addresses are in the allowlist, the allowlist is unavailable and the deployment accepts connections from any IP address.
 
 Even if not explicitly allowlisted, {{site.data.keyword.cloud_notm}} management services are still able to connect.
 {: .tip}
@@ -50,22 +50,27 @@ IPv6 is not currently supported.
 
 ### Setting an allowlist through the CLI
 
-The {{site.data.keyword.databases-for}} CLI Plug-in offers a set of commands for managing allowlists. Use [`cdb deployment-whitelist-add`](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference#deployment-allowlist-add) to add an allowlist. For example,
+The {{site.data.keyword.databases-for}} CLI plug-in offers a set of commands for managing allowlists. Use [`cdb deployment-whitelist-add`](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference#deployment-allowlist-add) to add an allowlist. For example,
 ```
 ibmcloud cdb deployment-whitelist-add example-deployment 198.51.100.1 "Allowlisted for testing"
 ```
+{: .pre}
+
 for a single IP address and 
 ```
 ibmcloud cdb deployment-whitelist-add example-deployment 198.51.100.0/24 "Testing range is now open" 
 ```
+{: .pre}
+
 for an IP range.
 
 Use [`cdb deployment-whitelist-list`](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference#deployment-allowlist-list) to view the current allowlist. For example,
 ```
 ibmcloud cdb deployment-whitelist-list <deployment name or CRN>
 ```
+{: .pre}
 
-More information is on the {{site.data.keyword.databases-for}} CLI Plug-in [reference page](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference).
+More information is on the {{site.data.keyword.databases-for}} CLI plug-in [reference page](/docs/databases-cli-plugin?topic=databases-cli-plugin-cdb-reference).
 
 ### Setting an allowlist through the API
 
@@ -75,11 +80,12 @@ More information is in the [API Reference](https://cloud.ibm.com/apidocs/cloud-d
 
 ### Removal
 
-From the UI, remove an IP address or netmask from the allowlist by clicking *Remove*. You can also use CLI command is `cdb deployment-whitelist-delete` or send a `DELETE` request to the API endpoint. When all entries on the allowlist are removed, the allowlist is disabled and all IP addresses are accepted by your deployment.
+From the UI, remove an IP address or netmask from the allowlist by clicking *Remove*. You can also use CLI command is `cdb deployment-whitelist-delete` or send a `DELETE` request to the API endpoint. When all entries on the allowlist are removed, the allowlist is unavailable and all IP addresses are accepted by your deployment.
 
 ## Allowlisting {{site.data.keyword.databases-for}} in your Environment
+{: #allowlist-ips}
 
-If you use allowlisting to control connections in your environment, you can use the lists below to allowlist {{site.data.keyword.databases-for}} deployments. You should allowlist all of the subnet ranges for the _entire_ region that your deployments live in.
+If you use allowlisting to control connections in your environment, you can use the following IP lists to allowlist {{site.data.keyword.databases-for}} deployments. You should allowlist all of the subnet ranges for the _entire_ [region](/docs/cloud-databases?topic=cloud-databases-regions) that your deployments live in.
 
 ### `che01` List
 Subnet | Location

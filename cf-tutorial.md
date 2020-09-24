@@ -20,11 +20,11 @@ subcollection: cloud-databases
 
 This tutorial uses a [sample app](https://github.com/IBM-Cloud/clouddatabases-helloworld-cloudfoundry-examples) to demonstrate how to connect a Cloud Foundry application in {{site.data.keyword.cloud_notm}} to a {{site.data.keyword.databases-for}} deployment. The application creates, reads from, and writes to a database that uses data that is supplied through the app's web interface.
 
-Each git branch of the [repository](https://github.com/IBM-Cloud/clouddatabases-helloworld-cloudfoundry-examples) corresponds to samples in a particular programming language. For example, when you click on **Branch** there is a **Node** branch, where all examples are written in JavaScript using Node.js. The files in each folder correspond to either a database or a message queue. 
+Each Git branch of the [repository](https://github.com/IBM-Cloud/clouddatabases-helloworld-cloudfoundry-examples) corresponds to samples in a particular programming language. For example, when you click **Branch** you see a **Node** branch, where all examples are written in JavaScript that uses Node.js. The files in each folder correspond to either a database or a message queue. 
 
 ## Cloning the Hello World sample app from GitHub
 
-Clone the repository of the language that you want to use. For instance, you can clone the **Node** repository by selecting the **Node** branch. Then click **Clone or download** to get the URL you'll need to clone using SSH or HTTPS. In your terminal, the command looks like
+Clone the repository of the language that you want to use. For instance, you can clone the **Node** repository by selecting the **Node** branch. Then, click **Clone or download** to get the URL you need to clone by using SSH or HTTPS. In your console, the command looks like
 
 ```shell
 git clone -b node git@github.com:IBM-Cloud/clouddatabases-helloworld-cloudfoundry-examples.git
@@ -34,7 +34,7 @@ Once the branch is cloned, you can select the appropriate directory for the data
 
 ## Installing the app dependencies
 
-Use npm to install dependencies. From your terminal, change the directory to where the sample app is located and install the dependencies that are listed in the `package.json` file.
+Use `npm` to install dependencies. From your console, change the directory to where the sample app is located and install the dependencies that are listed in the `package.json` file.
   ```
   npm install
   ```
@@ -43,9 +43,9 @@ Use npm to install dependencies. From your terminal, change the directory to whe
 
 1. If you do not already have an IBM Cloud account, [sign up here](https://cloud.ibm.com/registration/)
 
-2. [Download and install IBM Cloud CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli)
+2. [Download and install IBM Cloud CLI](/docs/cli?topic=cli-install-ibmcloud-cli)
 
-    The IBM Cloud CLI tool enables you to communicate with IBM Cloud from your terminal or command line.
+    The IBM Cloud CLI tool enables you to communicate with IBM Cloud from your console or command line.
 
 3. Connect to IBM Cloud in the command-line tool and follow the prompts to log in.
 
@@ -96,21 +96,21 @@ ibmcloud resource service-alias-create example-deployment --instance-name exampl
       - example-deployment
   ```
 
-1. Change the `name` value. The value that you choose will be the name of the app as it appears in your Resource List. 
+1. Change the `name` value. The value that you choose is set as the name of the app as it appears in your Resource List. 
 
 2. Change the `route` value to something unique. The route that you choose determines the subdomain of your application's URL:  `<route>.{region}.cf.appdomain.cloud`. Be sure the `{region}` matches where your application is deployed.
 
 3. Update the `service` value in `manifest.yml` to match the name of your deployment's Cloud Foundry alias.
 
-4. Push the app to IBM Cloud. When you push the app, it will automatically be bound to the service.
+4. Push the app to IBM Cloud. When you push the app, it is automatically bound to the service.
 ```shell
 ibmcloud cf push
 ```
 Your application is now running at host you entered as the value for the `route` in `manifest.yml`.
 
-## Code Structure
+## Code Structuring
 
-The code for connecting to the deployment and reading from and updating the database can be found in the `server` file. There's also `template` and `static` directories, which contain the html, style sheets and javascript for the web app.
+The code for connecting to the deployment and reading from and updating the database can be found in the `server` file. There's also `template` and `static` directories, which contain the html, stylesheets and JavaScript for the web app.
 
 | File | Description |
 | ---- | ----------- |

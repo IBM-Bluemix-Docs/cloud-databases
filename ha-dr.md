@@ -25,7 +25,7 @@ keywords: HA for cloud-databases, DR for cloud-databases, high availability for 
 This document covers all the {{site.data.keyword.cloud}} Databases, which include {{site.data.keyword.databases-for-cassandra}}, {{site.data.keyword.databases-for-elasticsearch}}, {{site.data.keyword.databases-for-enterprisedb}}, {{site.data.keyword.databases-for-etcd}}, {{site.data.keyword.databases-for-mongodb}}, {{site.data.keyword.databases-for-postgresql}}, {{site.data.keyword.databases-for-redis}}, and {{site.data.keyword.messages-for-rabbitmq}}. 
 {: .note}
 
-{{site.data.keyword.cloud}} Databases instances are deployed in either a multi-zone region (for example, Dallas, Frankfurt, London, Sydney, Tokyo, and Washington), or a single zone region (for eaxmple, Oslo, Seoul, and Chennai).  Each instance is deployed in a highly-available configuration.  That is, data is replicated by each database onto one or more servers making the data highly available during normal operations.
+{{site.data.keyword.cloud}} Databases instances are deployed in either a multi-zone region (for example, Dallas, Frankfurt, London, Sydney, Tokyo, and Washington), or a single zone region (for example, Oslo, Seoul, and Chennai).  Each instance is deployed in a highly-available configuration.  That is, data is replicated by each database onto one or more servers making the data highly available during normal operations.
 
 - In multi-zone regions, database members are distributed across different data centers, or zones.  
 - In single-zone regions, database members are distributed across different hosts.

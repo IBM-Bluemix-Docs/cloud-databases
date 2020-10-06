@@ -36,6 +36,7 @@ Review the following sections for the specific responsibilities for you and for 
 |Monitoring| {{site.data.keyword.databases-for}} is responsible for hosting monitoring and health services. | The Customer is responsible for integrating with the Monitoring service, Activity Tracker, or Logging service. |
 |High Availability| {{site.data.keyword.databases-for}} is responsible for deploying databases across availability zones in a Multi-Zone Region (MZR), or across hosts in a Single-Zone Region (SZR), as well as storing backups in cross-region Cloud Object Store instances. {{site.data.keyword.databases-for}} provides replication, fail-over features, and infrastructure maintenance/updates. High availability varies based on each database type, refer to database-specific documentation for details. | The Customer is responsible for designing application logic to retry connections caused by temporary connection failures (during regular database maintenance and updates).|
 |Database performance | {{site.data.keyword.databases-for}} is responsible for hosting and maintaining database infrastructure. | The Customer is responsible for the data model and performance, including tuning the data model, queries, and scaling the database appropriately for application needs. |
+|Operating System | {{site.data.keyword.databases-for}} is responsible for hosting and maintaining database Operating System infrastructure. | The Customer is not responsible for, nor has access to, Operating System level activities. |
 {: caption="Table 1. Responsibilities for incident and operations" caption-side="top"}
 
 ## Change management
@@ -53,7 +54,7 @@ Review the following sections for the specific responsibilities for you and for 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
 |Encryption| {{site.data.keyword.databases-for}} is responsible for the encryption of data on disk, in motion, and in backups. | The Customer is responsible for choosing and managing appropriate additional security features. If using Key Protect and Bring Your Own Key (BYOK), the customer is responsible for managing Key Protect authorizations and keys. |
-|Security| {{site.data.keyword.databases-for}} is responsible for ensuring the security of data on disk and data in motion within our infrastructure. | The Customer is responsible for managing {{site.data.keyword.cloud_notm}} passwords and database passwords, and keeping passwords secure. The Customer is also responsible for configuring appropriate network security or isolation (for example, IP allowlisting or private endpoints). |
+|Security| {{site.data.keyword.databases-for}} is responsible for ensuring the security of data on disk and data in motion within our infrastructure. | The Customer is responsible for managing {{site.data.keyword.cloud_notm}} passwords and database passwords, and keeping passwords secure. The Customer is also responsible for configuring appropriate network security or isolation (for example, IP allowlists or private endpoints). |
 {: caption="Table 4. Responsibilities for security and regulation compliance" caption-side="top"}
 
 ## Disaster recovery

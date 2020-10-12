@@ -7,6 +7,7 @@ IBM Cloud Databases
 	{: .navgroup id="learn"}
 	index.md
 	learn-size-guidance.md
+	learn-getting-to-production.md
 	{: .navgroup-end}
 
 	{: .navgroup id="howto"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-10-12"
+lastupdated: "2020-10-27"
 
 subcollection: cloud-databases
 
@@ -44,7 +44,7 @@ Review the following sections for the specific responsibilities for you and for 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
 |Scaling| {{site.data.keyword.databases-for}} is responsible for scaling infrastructure to meet customer requests. | The Customer is responsible for choosing, monitoring, and scaling disk, memory, and CPU core allocation for their deployments by using the UI or API. If a database deployment runs out of disk space, it may go down and have to be restored from backup. |
-|Version management | {{site.data.keyword.databases-for}} is responsible for maintaining minor versions and patches as described in the [version lifecycle policy](/docs/cloud-databases?topic=cloud-databases-versioning-policy). {{site.data.keyword.databases-for}} is also responsible for providing availability and tools for database major version upgrades. | The Customer is responsible for running major database version upgrades.|
+|Version management | {{site.data.keyword.databases-for}} is responsible for maintaining minor versions and patches as described in the [version lifecycle policy](/docs/cloud-databases?topic=cloud-databases-versioning-policy). {{site.data.keyword.databases-for}} is also responsible for providing availability and tools for database major version upgrades. | The Customer is responsible for running major database version upgrades. The Customer is also responsible for monitoring for EOL announcements and moving off EOL versions before the end of support date announced by {{site.data.keyword.databases-for}} also described in the version lifecycle policy.|
 {: caption="Table 2. Responsibilities for change management" caption-side="top"}
 
 ## Security and regulation compliance

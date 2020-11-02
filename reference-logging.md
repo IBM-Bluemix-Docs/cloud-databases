@@ -47,7 +47,7 @@ After September 15th 2020, IBM {{site.data.keyword.databases-for}} in the Chenna
 
 ## Provisioning {{site.data.keyword.la_full_notm}}
 
-Platform log information from your databases is automatically forwarded to {{site.data.keyword.la_full_notm}}, but to access it you must enable platform logging by [provisioning a Log Analysis service](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-provision) in your {{site.data.keyword.cloud_notm}} account and [configuring the service to receive {{site.data.keyword.cloud_notm}} platform logs](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNAconfig_svc_logs).
+Platform log information from your databases is automatically forwarded to {{site.data.keyword.la_full_notm}}, but to access it you must enable platform logging by [provisioning a Log Analysis service](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-provision) in your {{site.data.keyword.cloud_notm}} account and [configuring the service to receive {{site.data.keyword.cloud_notm}} platform logs](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-config_svc_logs).
 
 This setting enables platform logs from **ALL** {{site.data.keyword.cloud_notm}} services on your account that have {{site.data.keyword.la_full_notm}} integration to send logs to your {{site.data.keyword.la_full_notm}} service. [A list of the integrated services is available](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-cloud_services#cloud_services).
 {: .tip}

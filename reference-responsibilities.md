@@ -54,6 +54,7 @@ Review the following sections for the specific responsibilities for you and for 
 |----------|-----------------------|--------|
 |Encryption| {{site.data.keyword.databases-for}} is responsible for the encryption of data on disk, in motion, and in backups. | The Customer is responsible for choosing and managing appropriate additional security features. If using Key Protect and Bring Your Own Key (BYOK), the customer is responsible for managing Key Protect authorizations and keys. |
 |Security| {{site.data.keyword.databases-for}} is responsible for ensuring the security of data on disk and data in motion within our infrastructure. | The Customer is responsible for managing {{site.data.keyword.cloud_notm}} passwords and database passwords, and keeping passwords secure. The Customer is also responsible for configuring appropriate network security or isolation (for example, IP allowlists or private endpoints). |
+|Compliance| {{site.data.keyword.databases-for}} is responsible for ensuring adherence, auditing, and certification of compliances listed at the [IBM Cloud compliance page](https://www.ibm.com/cloud/compliance/industry). | The Customer is responsible for the storing, processing, and transmission of their data. More information on these specific responsibilities can be found in each of the {{site.data.keyword.databases-for}} offerings' specific Security Compliance documentation. |
 {: caption="Table 4. Responsibilities for security and regulation compliance" caption-side="top"}
 
 ## Disaster recovery

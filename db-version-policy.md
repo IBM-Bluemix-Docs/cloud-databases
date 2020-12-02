@@ -1,7 +1,7 @@
 ---
 Copyright:
-  years: 2018, 2019, 2020
-lastupdated: "2020-08-04"
+  years: 2018, 2020
+lastupdated: "2020-12-02"
 ---
 
 {:new_window: target="_blank"}
@@ -49,7 +49,7 @@ DataStax|Major versions are the first number in a `major.minor.patch` version nu
 Elasticsearch|Major versions are the first number in a `release.version.maintenance` version number.|v6.8, unplanned
 EnterpriseDB|Major version is defined by the first number in the version number.| v12, December 2024
 etcd|Major versions are the first number in a `major.minor.patch` version number.| v3.3, unplanned
-MongoDB|Major versions are the first two numbers in a `major.x.patch` version number. In cases where `x` is even, it is a stable release suitable for production. Even `x` versions are the only ones available on {{site.data.keyword.databases-for}}.| v3.6, April 2021
+MongoDB|Major versions are the first two numbers in a `major.x.patch` version number. In cases where `x` is even, it is a stable release suitable for production. Even `x` versions are the only ones available on {{site.data.keyword.databases-for}}.| v3.6, [April 2021] (https://www.ibm.com/cloud/blog/announcements/databases-for-mongodb-36-end-of-life-in-april-2021)
 PostgreSQL*|Major version is defined by the first number in the version number.| v9.5, [February 2021](https://www.ibm.com/cloud/blog/announcements/postgresql-9-5-end-of-life) 
 Redis|Major versions are the first number in a `major.minor.patch` version number.| v4.0, unplanned
 RabbitMQ|Major versions are the first two numbers in a `major.x.patch` version number.| v3.7, [September 2020](https://www.ibm.com/cloud/blog/announcements/retiring-messages-for-rabbitmq-3-7)

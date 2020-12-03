@@ -76,11 +76,11 @@ Each log line can be expanded to a detailed view by clicking the arrow to the le
     - `member` - the member ID for which node in the cluster generated the log
     - `CRN` - the full deployment ID of your deployment.
 
-{{site.data.keyword.la_full_notm}} offers [searching](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNAview_logs#view_logs_step6), [filtering](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNAview_logs#view_logs_step5) to help you navigate your logs.
+{{site.data.keyword.la_full_notm}} offers [searching](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-view_logs#view_logs_step6), [filtering](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-view_logs#view_logs_step5) to help you navigate your logs.
 
-[Export](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNAexport#export) and [archiving](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNAarchiving#archiving) are available so you can customize retention (and cost) for your use-case.
+[Export](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-export#export) and [archiving](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-archiving#archiving) are available so you can customize retention (and cost) for your use-case.
 
-To set up logging alerts, see [Working with Alerts](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNAalerts#alerts)
+To set up logging alerts, see [Working with Alerts](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-alerts#alerts)
 
 For more information on features offered by {{site.data.keyword.la_full_notm}}, including integrating it with your other {{site.data.keyword.cloud_notm}} services, see [its full documentation](/docs/Log-Analysis-with-LogDNA).
 

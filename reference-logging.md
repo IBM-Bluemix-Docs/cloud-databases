@@ -56,7 +56,9 @@ This setting enables platform logs from **ALL** {{site.data.keyword.cloud_notm}}
 
 ### HIPAA 
 
-{{site.data.keyword.la_full_notm}} does not currently offer a HIPAA-compliant plan for the service. Also, use caution when you configure the platform service logs, since this setting can impact other services that require HIPAA compliance.
+{{site.data.keyword.la_full_notm}} offers a HIPAA-compliant plan for the service. Fore more information, please see the {{site.data.keyword.la_full_notm}} documentation on [Provisioning a HIPAA Compliance instance](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-provision_hipaa).
+
+Use caution when configuring the platform service logs, since this setting can impact other services that require HIPAA compliance.
 
 ## Using {{site.data.keyword.la_full_notm}}
 

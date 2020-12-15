@@ -52,7 +52,7 @@ etcd|Major versions are the first number in a `major.minor.patch` version number
 MongoDB|Major versions are the first two numbers in a `major.x.patch` version number. In cases where `x` is even, it is a stable release suitable for production. Even `x` versions are the only ones available on {{site.data.keyword.databases-for}}.| v3.6, [April 2021](https://www.ibm.com/cloud/blog/announcements/databases-for-mongodb-36-end-of-life-in-april-2021)
 PostgreSQL*|Major version is defined by the first number in the version number.| v9.5, [February 2021](https://www.ibm.com/cloud/blog/announcements/postgresql-9-5-end-of-life) 
 Redis|Major versions are the first number in a `major.minor.patch` version number.| v4.0, unplanned
-RabbitMQ|Major versions are the first two numbers in a `major.x.patch` version number.| v3.7, [September 2020](https://www.ibm.com/cloud/blog/announcements/retiring-messages-for-rabbitmq-3-7)
+RabbitMQ|Major versions are the first two numbers in a `major.x.patch` version number.| [v3.8, unplanned](https://www.ibm.com/cloud/blog/announcements/retiring-messages-for-rabbitmq-3-7)
 {: caption="Table 1. Major versions for {{site.data.keyword.databases-for}}" caption-side="top"}
 
 *There was a change of versioning schema for PostgreSQL after version 9.6. Before and including version 9.6, a PostgreSQL major version was defined by the first two numbers in the version.

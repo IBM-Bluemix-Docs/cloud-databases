@@ -34,13 +34,13 @@ Deployment Region | Activity Tracker Region
 `eu-gb` | `eu-gb`
 `osl01` | `eu-gb`
 `seo01` | `jp-tok`
-`che01` | `jp-tok`
+`che01` | `che01`
 `eu-de` | `eu-de`
 `au-syd` | `au-syd`
 `us-east` | `us-east`
 {: caption="Table 1. Activity Tracker regions" caption-side="top"}
 
-Events from your deployments appear in an Activity Tracker instance in the same region, except for `osl01`, `seo01`, and `che01`. Deployments in `osl01` have their events forwarded to `eu-gb`. Deployments in `seo01` and `che01` have their events forwarded to `jp-tok`. If you have deployments in multiple regions, you must set up the Activity Tracker in multiple regions. 
+Events from your deployments appear in an Activity Tracker instance in the same region, except for `osl01` and `seo01`. Deployments in `osl01` have their events forwarded to `eu-gb`. Deployments in `seo01` have their events forwarded to `jp-tok`. If you have deployments in multiple regions, you must set up the Activity Tracker in multiple regions. 
 
 ## Activity Tracker through LogDNA
 
@@ -56,11 +56,16 @@ You can access Activity Tracker with LogDNA through the _Observability_ tab of y
 
 Once event activity is being forwarded to the service, each event can be expanded to a detailed view by clicking the arrow to the left of the timestamp.
 
-The LogDNA service offers [searching](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNAview_logs#view_logs_step6), [filtering](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-view_logs#view_logs_step5), and [export](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-export#export) of events so you can customize retention for your use-case. You can also use it to configure [alerts](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-alerts).
+When reviewing Activity Tracker logs, you will see `denies` that include the `dry_run` tag. These denies are marked with a `true` or `false` value. 
+- Events with `dry_run: false` indicate an attempt to execute an action. 
+- Events with `dry_run: true` indicate an attempt to determine support for an action without triggering that action to occur. Such `dry_run` attempts can occur as the service instance management console determines the features to which a logged in user has access.
+
+
+The LogDNA service offers [searching](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-view_logs#view_logs_step6), [filtering](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-view_logs#view_logs_step5), and [export](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-export) of events so you can customize retention for your use-case. You can also use it to configure [alerts](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-alerts).
 
 ## Event Fields
 
-A description of the common fields for an Activity Tracker event is on the [event fields](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-event) page.
+A description of the common fields for an Activity Tracker event is on the [event fields](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-event) page.
 
 ## List of Events
 

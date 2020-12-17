@@ -29,9 +29,9 @@ IBM Cloud Databases
 	db-version-policy.md
 	reference-responsibilities.md
 	reference-service-endpoints.md
-	reference-regions.md
 	reference-iam.md
 	reference-logging.md
 	reference-activity-tracker.md
 	reference-key-protect.md
+	reference-hpcs.md
 	{: .navgroup-end}

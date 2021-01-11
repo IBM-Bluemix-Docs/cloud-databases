@@ -15,6 +15,7 @@ IBM Cloud Databases
 	howto-deprovisioning.md
 	howto-manage-backups.md
 	howto-allowlists.md
+	howto-vpes.md
 	ha-dr.md
 
 	{: .topicgroup}

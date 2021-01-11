@@ -1,11 +1,11 @@
 ---
 Copyright:
-  years: 2019, 2020
-lastupdated: "2020-08-04"
+  years: 2019, 2021
+lastupdated: "2021-01-11"
 
 subcollection: cloud-databases
 
-keywords: service endpoints, private endpoints, private networking
+keywords: service endpoints, private endpoints, private networking, vpe, virtual private endpoints
 
 ---
 
@@ -96,3 +96,10 @@ If you only have private endpoints on your deployments, then all new credentials
 * From your workstation, run `ssh -D 2345 user@vsi-host` This starts an SSH session and open a SOCKS proxy on port 2345 that forwards all traffic through the VSI
 * Configure your browser or application to use a SOCKS5 proxy on `localhost:2345`
 * Run your application or open the preferred private-endpoint in your browser (for example, a management UI).
+
+
+## Using Virtual Private Endpoints 
+{: #Virtual-Private-Endpoints}
+
+Review the {{site.data.keyword.cloud}} Databases [documentation on Virtual Private Endpoints (VPEs) here](/docs/cloud-databases?topic=cloud-databases-vpes). 
+

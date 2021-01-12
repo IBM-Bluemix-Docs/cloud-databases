@@ -1,7 +1,7 @@
 ---
 Copyright:
   years: 2021
-lastupdated: "2021-01-11"
+lastupdated: "2021-01-12"
 
 subcollection: cloud-databases
 
@@ -21,7 +21,7 @@ keywords: pDNS, private endpoints, private networking, vpe, virtual private endp
 # Virtual Private Endpoints 
 {: #vpes}
 
-This document covers all the Cloud Databases, that include {{site.data.keyword.databases-for-cassandra}}, {{site.data.keyword.databases-for-elasticsearch}}, {{site.data.keyword.databases-for-enterprisedb}}, {{site.data.keyword.databases-for-etcd}}, {{site.data.keyword.databases-for-mongodb}}, {{site.data.keyword.databases-for-postgresql}}, {{site.data.keyword.databases-for-redis}}, and {{site.data.keyword.messages-for-rabbitmq}}.
+This document covers all the Cloud Databases, that include {{site.data.keyword.databases-for-cassandra}}, {{site.data.keyword.databases-for-elasticsearch}}, {{site.data.keyword.databases-for-enterprisedb}}, {{site.data.keyword.databases-for-etcd}}, {{site.data.keyword.databases-for-mongodb}}, {{site.data.keyword.databases-for-postgresql}}, {{site.data.keyword.databases-for-redis}}, and {{site.data.keyword.messages-for-rabbitmq}}. 
 {: .note}
 
 {{site.data.keyword.cloud}} Virtual Private Endpoint (VPE) for {{site.data.keyword.vpc_full}} provides the ability to connect to IBM services on the IBM private network from your VPC network.
@@ -29,7 +29,8 @@ This document covers all the Cloud Databases, that include {{site.data.keyword.d
 
 ## Using Virtual Private Endpoints
 {: #using-vpes}
-
+Virtual Private Endpoints (VPEs) are generally available in all regions except US South and US East. VPE availability in US South and US East are expected shortly. 
+{: .note}
 ### Before you begin
 
 - You need to have an [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){:new_window}.

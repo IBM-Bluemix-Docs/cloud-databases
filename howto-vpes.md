@@ -29,7 +29,7 @@ This document covers all the Cloud Databases, that include {{site.data.keyword.d
 
 ## Using Virtual Private Endpoints
 {: #using-vpes}
-Virtual Private Endpoints (VPEs) are generally available in all regions except US South and US East. VPE availability in US South and US East are expected shortly. 
+Virtual Private Endpoints (VPEs) are generally available in all regions except US South and US East. VPE availability in US South and US East is expected shortly. 
 {: .note}
 ### Before you begin
 

@@ -65,7 +65,7 @@ ibmcloud resource service-instance-create example-database <service-name> standa
 }'
 ```
 
-In the API, use the `disk-encryption-key` parameter in the body of the request.
+In the API, use the `disk_encryption_key` parameter in the body of the request.
 ```
 curl -X POST \
   https://resource-controller.cloud.ibm.com/v2/resource_instances \

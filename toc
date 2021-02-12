@@ -15,8 +15,12 @@ IBM Cloud Databases
 	howto-deprovisioning.md
 	howto-manage-backups.md
 	howto-allowlists.md
-	howto-vpes.md
 	ha-dr.md
+
+	{: .topicgroup}
+	Using Endpoints
+		reference-service-endpoints.md
+		howto-vpes.md
 
 	{: .topicgroup}
 	Tutorials
@@ -29,7 +33,6 @@ IBM Cloud Databases
 	[Cloud Databases API](https://cloud.ibm.com/apidocs/cloud-databases-api)
 	db-version-policy.md
 	reference-responsibilities.md
-	reference-service-endpoints.md
 	reference-iam.md
 	reference-logging.md
 	reference-activity-tracker.md

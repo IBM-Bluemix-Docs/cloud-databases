@@ -1,7 +1,7 @@
 ---
 Copyright:
   years: 2019, 2021
-lastupdated: "2021-01-11"
+lastupdated: "2021-02-04"
 
 subcollection: cloud-databases
 
@@ -64,7 +64,7 @@ For more information, see the [Provisioning](/docs/cloud-databases?topic=cloud-d
 
 After you have a deployment, it is possible to change your public and private service endpoints configuration, except for {{site.data.keyword.databases-for-mongodb}}. 
 
-In the _Settings_ tab of your deployment's dashboard, there is a card for _Service Endpoints_. You can toggle which types of connections are available to your deployment.
+In the _Overview_ tab of your deployment's dashboard, there is a card for _Endpoints_. You can toggle which types of connections are available to your deployment.
 
 You can use the [`ibmcloud resource service-instance-update`](/docs/cli?topic=cli-ibmcloud_commands_resource#ibmcloud_resource_service_instance_update) command in the CLI, specifying the endpoint with the `--service-endpoints` flag.
 ```

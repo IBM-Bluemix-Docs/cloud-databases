@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  years: 2019, 2020
-lastupdated: "2020-08-03"
+  years: 2019, 2021
+lastupdated: "2021-02-04"
 
 subcollection: cloud-databases
 
@@ -39,12 +39,12 @@ Even if not explicitly allowlisted, {{site.data.keyword.cloud_notm}} management 
 
 The UI for managing allowlists is on the _Settings_ tab of your _Deployment Overview_.
 
-**IP addresses** - The *IP* field can take a single complete IPv4 address with or without a netmask. Without a netmask, incoming connections must come from exactly that IP address. 
+![Allowlist UI](images/settings-allowlist-ip.png)
+
+**IP addresses** - The *IP* field can take a single complete IPv4 address with or without a netmask. Without a netmask, incoming connections must come from exactly that IP address. To allow a connection from a specified range of IP addresses, use a netmask. The IP address must be fully specified. That means entering, for example, 192.168.1.0/24 rather than 192.168.1/24.
 
 IPv6 is not currently supported.
 {: tip}
-
-**Netmasks** - To allow a connection from a specified range of IP addresses, use a netmask. The IP address must be fully specified. That means entering, for example, 192.168.1.0/24 rather than 192.168.1/24.
 
 **Description** - The *Description* can be any user-significant text for identifying the allowlist entry - a customer name, project identifier, or employee number, for example. The description field is required.
 

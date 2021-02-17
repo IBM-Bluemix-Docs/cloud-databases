@@ -18,11 +18,6 @@ IBM Cloud Databases
 	ha-dr.md
 
 	{: .topicgroup}
-	Using Endpoints
-		reference-service-endpoints.md
-		howto-vpes.md
-
-	{: .topicgroup}
 	Tutorials
 		k8-tutorial.md
 		cf-tutorial.md
@@ -36,6 +31,8 @@ IBM Cloud Databases
 	reference-iam.md
 	reference-logging.md
 	reference-activity-tracker.md
+	howto-vpes.md
+	reference-service-endpoints.md
 	reference-key-protect.md
 	reference-hpcs.md
 	{: .navgroup-end}

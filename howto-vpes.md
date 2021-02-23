@@ -55,7 +55,7 @@ Virtual Private Endpoints (VPEs) are generally available in all regions except U
 5. After you create your VPE, it might take a few minutes for the new VPE and pDNS to complete the process and begin working for your VPC. Completion is confirmed when you see an IP address set in the [details view](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway) of the VPE. 
 
 
-6. To make sure pDNS is functioning for your VPE, `ssh` into your VSI and run `nslookup <instance_hostname>`. For example:
+6. To make sure pDNS is functioning for your VPE, `ssh` into your VSI and run `nslookup <instance_hostname>`. The following example shows the output when running nslookup on instance hostnames of `host-0.private.databases.appdomain.cloud`, `host-1.private.databases.appdomain.cloud`, and `host-2.private.databases.appdomain.cloud` respectively:
     ```
     root@test-vpc-vsi:~# nslookup host-0.private.databases.appdomain.cloud
     Server:		127.0.0.53

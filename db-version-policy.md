@@ -1,7 +1,7 @@
 ---
 Copyright:
-  years: 2018, 2020
-lastupdated: "2020-12-02"
+  years: 2018, 2021
+lastupdated: "2021-03-12"
 ---
 
 {:new_window: target="_blank"}
@@ -41,7 +41,7 @@ Restoration of existing databases into new deployments of the deprecated major v
 
 At the end of the transition window, deprecated major versions cannot be deployed on {site.data.keyword.IBM_notm}} {{site.data.keyword.databases-for}}. A backup of the deployment is taken and access to databases that are running a deprecated version is removed or automatically upgraded to the next major version. See table 1 for which databases are upgraded or removed. Regardless, the backup is available to be restored into a new supported database version.
 
-For customers using databases that are automatically upgraded to the next major version in-place: these databases are instead disabled if the customer is still using deprecated features.
+If no action is taken, we will attempt to upgrade the database in-place to the next major version as per our Database Versioning Policy. This may result in compatibility issues with your apps or the in-place upgrade, on rare occasions, may fail impacting your availability. In the case of a failure, the database will be disabled and you will need to restore from backup. We recommend self-migrating prior to the end of support date.
 {: .note}
 
 ## Major versions defined

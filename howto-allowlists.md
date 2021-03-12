@@ -85,7 +85,7 @@ From the UI, remove an IP address or netmask from the allowlist by clicking *Rem
 ## Allowlist {{site.data.keyword.databases-for}} in your Environment
 {: #allowlist-ips}
 
-If you use allowlists to control connections in your environment, you can use the following IP lists to allowlist {{site.data.keyword.databases-for}} deployments. You should allowlist all of the subnet ranges for the _entire_ [region](/docs/cloud-databases?topic=cloud-databases-regions) that your deployments live in.
+If you use allowlists to control connections in your environment, you can use the following IP lists to allowlist {{site.data.keyword.databases-for}} deployments. You should allowlist all of the subnet ranges for the _entire_ region that your deployments live in.
 
 ### `che01` List
 Subnet | Location
